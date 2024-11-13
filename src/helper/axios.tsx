@@ -1,13 +1,12 @@
 import axios from "axios";
 
-export default axios.create({
-  // baseURL: "https://il8rigour.com/",
-  // baseURL: "http://il8rigour.com:8000/",
-  baseURL: "https://ai.neovis.co.in/interview/",
-  // baseURL: "https://lms-5wr7.onrender.com/",
+// Set the baseURL dynamically using an environment variable or a default value
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_BASE_URL || "https://ai.neovis.co.in/interview/", // Use environment variable if available
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
-    
   },
 });
+
+export default api;
