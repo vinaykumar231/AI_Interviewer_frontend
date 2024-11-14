@@ -1,4 +1,3 @@
-import { LineChart, Link } from 'lucide-react';
 import React from 'react';
 
 interface FooterColumnProps {
@@ -15,9 +14,9 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, links }) => {
       <ul className="flex flex-col px-1.5 mt-4 text-xl text-white">
         {links.map((link, index) => (
           <li key={index} className={index > 0 ? "mt-5" : ""}>
-            <Link to="#" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            <a href="#" className="hover:underline focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               {link}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
