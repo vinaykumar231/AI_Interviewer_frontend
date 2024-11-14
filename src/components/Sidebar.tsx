@@ -75,12 +75,12 @@ const Sidebar: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <div className="p-4">
+          {/* <div className="p-4">
             <a href="#" className="flex items-center space-x-2 py-2.5 px-4 text-sm hover:bg-blue-700">
               <BookOpen className="w-6 h-6" />
               <span>Knowledge Base</span>
             </a>
-          </div>
+          </div> */}
         </aside>
        )}
     </>
