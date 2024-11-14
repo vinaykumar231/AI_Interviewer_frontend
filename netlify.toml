@@ -1,0 +1,11 @@
+[build]
+  # Directory containing the output of the build process (default is "build")
+  publish = "build"
+  
+  # Build command to run before publishing
+  command = "npm run build"
+
+[dev]
+  # Local development server settings (optional)
+  command = "npm start"
+  port = 3000
