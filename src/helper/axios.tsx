@@ -1,14 +1,12 @@
 import axios from "axios";
 
-export default axios.create({
-  // baseURL: "https://il8rigour.com/",
-  // baseURL: "http://il8rigour.com:8000/",
-  // baseURL: "https://ilate.onrender.com/",
-  baseURL: "https://9270-2405-201-37-21d9-8085-61bf-7ef8-f9d9.ngrok-free.app/",
-  // baseURL: "https://lms-5wr7.onrender.com/",
+// Set the baseURL dynamically using an environment variable or a default value
+const api = axios.create({
+  baseURL: "https://ai.neovis.co.in/interview/", // Use environment variable if available
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
-    "ngrok-skip-browser-warning": true,
   },
 });
+
+export default api;
