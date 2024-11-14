@@ -282,11 +282,11 @@ const ResumeUpload: React.FC = () => {
                     {results.length > 0 && (
                         <div className="mt-8 w-[50%] ">
                              <div className="mt-8 w-[50%] text-end ml-[52%]">
-                            <a href="/selected_candidate">
+                            <Link to="/selected_candidate">
                         <button className="mt-2 px-4 py-2 bg-white text-blue-500 border border-blue-500 rounded-md text-center">
                             Go to Selected Candidates
                         </button>
-                    </a>
+                    </Link>
                     </div>
                             <h3 className="text-lg font-semibold text-center">Resume Selection Results</h3>
                             {results.map((result, index) => (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from '../helper/axios';
 import { FaFilePdf, FaUser ,FaVideo } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 // Define the interface for the API response
 interface ResumeReport {
@@ -53,23 +54,23 @@ const ResumeReports: React.FC = () => {
                          <div className="flex flex-col space-y-2">
                              <div className="flex items-center">
                                  <FaFilePdf className="mr-2 text-red-500" />
-                                 <a href={report.Interview_report} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
+                                 <Link to={report.Interview_report} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
                                      View Interview Report
-                                 </a>
+                                 </Link>
                              </div>
                              <div className="flex items-center">
                                  <FaFilePdf className="mr-2 text-green-500" />
-                                 <a href={report.resume} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
+                                 <Link to={report.resume} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
                                      View Resume
-                                 </a>
+                                 </Link>
                              </div>
                              {/* Conditionally render the video link if video_url is present */}
                              {report.video_url && (
                                  <div className="flex items-center">
                                      <FaVideo  className="mr-2 text-yellow-500" />
-                                     <a href={report.video_url} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
+                                     <Link to={report.video_url} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-500">
                                          View Video
-                                     </a>
+                                     </Link>
                                  </div>
                              )}
                          </div>
