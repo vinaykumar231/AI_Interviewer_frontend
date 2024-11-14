@@ -23,7 +23,7 @@ const Candidate_Interview: React.FC<AIInterviewerProps> = ({
   onAnswerComplete
 }) => {
   const [stream, setStream] = useState<MediaStream | null>(null);
-  const [timeLeft, setTimeLeft] = useState<number>(90);
+  const [timeLeft, setTimeLeft] = useState<number>(5);
   const [isRecording, setIsRecording] = useState<boolean>(false);
   const [question, setQuestion] = useState<Question>(initialQuestion);
   const [error, setError] = useState<string | null>(null);
@@ -158,7 +158,7 @@ const Candidate_Interview: React.FC<AIInterviewerProps> = ({
                 totalQuestions: question.totalQuestions,
                 currentQuestion: nextQuestionIndex + 1
               });
-              setTimeLeft(90);
+              setTimeLeft(5);
             } else {
               handleInterviewComplete();
             }
@@ -263,7 +263,7 @@ const Candidate_Interview: React.FC<AIInterviewerProps> = ({
 
       mediaRecorder.start(1000);
       setIsRecording(true);
-      setTimeLeft(90);
+      setTimeLeft(5);
       setError(null);
 
     } catch (err) {
